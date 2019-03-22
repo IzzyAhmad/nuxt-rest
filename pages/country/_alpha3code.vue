@@ -3,12 +3,11 @@
     <navbar></navbar>
     <div class="row">
       <div class="col-12">
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3  bg-light">
           <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 font-weight-normal">{{country.name}}</h1>
-            <p
-              class="lead font-weight-normal"
-            >And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+            <h1 class="display-3 font-weight-normal mb-5">{{country.name}}</h1>
+                <pre>{{formatJson(country)}}</pre>
+
           </div>
         </div>
       </div>
@@ -28,6 +27,9 @@ export default {
   methods: {
     formatNumber(value) {
       return value.toLocaleString();
+    },
+    formatJson(obj){
+        return JSON.stringify(obj, undefined, 2);
     }
   },
   asyncData({ params, error }) {
