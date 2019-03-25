@@ -19,7 +19,7 @@
             <h3 class="mb-0">{{country.name}}</h3>
             <div class="mb-1 text-muted">Populations: {{formatNumber(country.population)}}</div>
             <p class="card-text mb-auto"></p>
-            <nuxt-link :to="'/nuxt-rest/country/'+country.alpha3Code" class="stretched-link text-decoration-none">More..</nuxt-link>
+            <nuxt-link :to="'/country/'+country.alpha3Code" class="stretched-link text-decoration-none">More..</nuxt-link>
           </div>
           <div class="col-auto d-none d-lg-block">
             <img
